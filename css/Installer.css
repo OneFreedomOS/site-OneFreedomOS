@@ -111,6 +111,16 @@ body {
     100% { transform: translateX(0); opacity: 1; }
 }
 
+.version-block {
+    margin-top: 30px;
+}
+
+.version-block h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
 .minecraft-btn {
     display: inline-block;
     margin-top: 20px;
