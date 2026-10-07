@@ -1,44 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnefreedomOS - Community</title>
-    <link rel="icon" href="logo (2).png?v=2" type="image/png">
-    <link rel="stylesheet" href="css/Community.css">
-</head>
-<body class="page-community">
+*, *::before, *::after { box-sizing: border-box; }
 
-    <nav class="navigation-panel">
-        <div class="left-nav-group">
-            <div class="brand-container">
-                <img src="logo.png" alt="OS Logo" class="brand-logo">
-                <span class="brand-name">OneFreedomOS</span>
-            </div>
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
-            <div class="menu-links-wrapper">
-                <div class="green-slider"></div>
-                <a href="index.html" class="menu-link" id="link-home">Home</a>
-                <a href="Installer.html" class="menu-link" id="link-installer">Installer</a>
-                <a href="Community.html" class="menu-link active" id="link-community">Community</a>
-            </div>
-        </div>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #141414;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
 
-        <button class="lang-btn" id="lang-toggle">RU</button>
-    </nav>
+img { max-width: 100%; }
 
-    <div class="content-container">
-        <main class="page-content">
-            <h1 data-en="Our Community" data-ru="Наше сообщество">Our Community</h1>
-            <p data-en="Join our social media to follow development updates and chat with other users!" data-ru="Присоединяйтесь к нашим социальным сетям, чтобы следить за разработкой и общаться!">Join our social media to follow development updates and chat with other users!</p>
-            
-            <div class="social-links">
-                <a href="https://t.me/One_Freedom_OS" target="_blank" class="minecraft-btn">Telegram</a>
-                <a href="https://www.tiktok.com/@onefreedomos_official?_r=1&_t=ZS-99sk0UkuF1w" target="_blank" class="minecraft-btn">TikTok</a>
-            </div>
-        </main>
-    </div>
+.navigation-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 5.5rem;
+    background-color: #3c3c3c;
+    border-bottom: 0.25rem solid #1e1e1e;
+    padding: 0.5rem 1.875rem;
+    gap: 1rem;
+}
 
-    <script src="js/community.js"></script>
-</body>
-</html>
+.left-nav-group {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-logo {
+    width: 4.375rem;
+    height: 4.375rem;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 1.375rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.menu-links-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 2.75rem;
+    width: 9.375rem;
+    border: 0.125rem solid #000000;
+    background-color: #4a4a4a;
+    box-shadow: inset -0.1875rem -0.1875rem 0 #2e2e2e, inset 0.1875rem 0.1875rem 0 #6a6a6a;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    margin-right: 1.25rem;
+    text-align: center;
+}
+
+.green-slider {
+    position: absolute;
+    height: 2.75rem;
+    width: 9.375rem;
+    background-color: #2e6e2e;
+    border: 0.125rem solid #000000;
+    box-shadow: inset -0.1875rem -0.1875rem 0 #1a3e1a, inset 0.1875rem 0.1875rem 0 #4aae4a;
+    z-index: 1;
+    top: calc(50% - 1.375rem);
+    transform: translateY(0);
+    opacity: 1;
+    left: 21.25rem;
+    animation: sliderFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sliderFadeIn {
+    0% { transform: translateY(-15px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.menu-link.active {
+    color: #55ff55;
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.page-content {
+    padding: 2.5rem 1.875rem;
+    animation: pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageEnter {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.875rem;
+}
+
+.minecraft-btn {
+    display: inline-block;
+    margin-top: 0;
+    padding: 0.9375rem 1.875rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    background-color: #4a4a4a;
+    border: 0.125rem solid #000000;
+    box-shadow: inset -0.25rem -0.25rem 0 #2e2e2e, inset 0.25rem 0.25rem 0 #6a6a6a;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.minecraft-btn:hover {
+    background-color: #5c5c5c;
+    box-shadow: inset -0.25rem -0.25rem 0 #3a3a3a, inset 0.25rem 0.25rem 0 #8a8a8a;
+}
+
+.minecraft-btn:active {
+    background-color: #2e2e2e;
+    box-shadow: inset 0.25rem 0.25rem 0 #000000;
+    transform: translateY(2px);
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.25rem;
+    width: 3.125rem;
+    border: 0.125rem solid #000000;
+    background-color: #4a4a4a;
+    box-shadow: inset -0.125rem -0.125rem 0 #2e2e2e, inset 0.125rem 0.125rem 0 #6a6a6a;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-btn:hover {
+    background-color: #5c5c5c;
+    box-shadow: inset -0.125rem -0.125rem 0 #3a3a3a, inset 0.125rem 0.125rem 0 #8a8a8a;
+    color: #ffffff;
+}
+
+.lang-btn:active {
+    background-color: #2e2e2e;
+    box-shadow: inset 0.125rem 0.125rem 0 #000000;
+}
+
+/* ---------- Мобильная раскладка ---------- */
+@media (max-width: 960px), (max-device-width: 600px) {
+    .navigation-panel { flex-wrap: wrap; padding: 0.75rem 1rem; row-gap: 0.75rem; }
+    .left-nav-group { display: contents; }
+    .brand-container { order: 1; }
+    .lang-btn { order: 2; }
+    .menu-links-wrapper { order: 3; width: 100%; gap: 0.5rem; }
+    .brand-logo { width: 3rem; height: 3rem; }
+    .brand-name { font-size: 1.125rem; }
+    .green-slider { display: none; }
+    .menu-link {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        height: 2.5rem;
+        margin-right: 0;
+        font-size: 0.9375rem;
+    }
+    .menu-link.active {
+        background-color: #2e6e2e;
+        border-color: #000000;
+        box-shadow: inset -0.1875rem -0.1875rem 0 #1a3e1a, inset 0.1875rem 0.1875rem 0 #4aae4a;
+    }
+    .page-content { padding: 1.5rem 1rem; }
+    h1 { font-size: 1.5rem; }
+    .social-links { flex-direction: column; }
+}
+
+@media (min-width: 961px) and (max-device-width: 600px) {
+    html { font-size: 4.1vw; }
+}
