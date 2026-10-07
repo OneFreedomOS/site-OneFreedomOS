@@ -1,0 +1,46 @@
+/* Подключается после Home.css */
+.green-slider { display: none; }
+
+.page-404 .page-content {
+    display: flex;
+    justify-content: center;
+}
+
+.error-box {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-top: 2rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    background-color: #3c3c3c;
+    border: 0.125rem solid #000000;
+    box-shadow: inset -0.25rem -0.25rem 0 #2e2e2e, inset 0.25rem 0.25rem 0 #6a6a6a;
+}
+
+.error-code {
+    margin: 0;
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #ff5555;
+}
+
+.error-title {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.75rem;
+}
+
+.error-text {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    color: #e0e0e0;
+}
+
+.error-box .minecraft-btn { margin-top: 1.25rem; }
+
+@media (max-width: 960px), (max-device-width: 600px) {
+    .error-box { margin-top: 0.5rem; padding: 1.5rem 1rem; }
+    .error-code { font-size: 3.5rem; }
+    .error-title { font-size: 1.375rem; }
+    .error-box .minecraft-btn { display: block; }
+}
