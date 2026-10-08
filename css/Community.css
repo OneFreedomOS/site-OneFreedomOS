@@ -113,6 +113,11 @@ img { max-width: 100%; }
     animation: pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+.site-footer {
+    opacity: 0.7;
+    margin-left: 30px;
+}
+
 @keyframes pageEnter {
     0% { transform: translateY(20px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
