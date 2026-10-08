@@ -7,7 +7,7 @@ function applyLanguage(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
     });
-    
+
     if (lang === 'en') {
         langToggle.textContent = 'RU';
         document.getElementById('link-home').textContent = 'Home';
@@ -27,4 +27,16 @@ langToggle.addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'ru' : 'en';
     localStorage.setItem('siteLang', currentLang);
     applyLanguage(currentLang);
+});
+
+document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (!target || !navigator.clipboard) return;
+
+        navigator.clipboard.writeText(target.textContent.trim()).then(() => {
+            btn.textContent = currentLang === 'en' ? 'Copied' : 'Скопировано';
+            setTimeout(() => applyLanguage(currentLang), 1500);
+        });
+    });
 });
