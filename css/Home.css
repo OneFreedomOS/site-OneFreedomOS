@@ -126,13 +126,6 @@ img { max-width: 100%; }
     margin: 1rem 0;
 }
 
-.hero-logo {
-    width: 15rem;
-    height: 15rem;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
 .hero-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
