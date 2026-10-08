@@ -1,3 +1,5 @@
+.green-slider { display: none; }
+
 .page-404 .page-content {
     display: flex;
     justify-content: center;
@@ -5,33 +7,18 @@
 
 .error-box {
     width: 100%;
-    max-width: 40rem;
-    margin-top: 1rem;
+    max-width: 37.5rem;
+    margin-top: 2rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
     background-color: #3c3c3c;
     border: 0.125rem solid #000000;
     box-shadow: inset -0.25rem -0.25rem 0 #2e2e2e, inset 0.25rem 0.25rem 0 #6a6a6a;
 }
 
-.error-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #7a1f1f;
-    border-bottom: 0.125rem solid #000000;
-}
-
-.error-body { padding: 2rem 1.5rem; }
-
 .error-code {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     line-height: 1;
     color: #ff5555;
@@ -43,48 +30,16 @@
 }
 
 .error-text {
-    margin: 0 0 1.5rem;
-    color: #e0e0e0;
-}
-
-.error-links {
-    margin: 0 0 1.5rem;
-    padding: 1rem 1.25rem;
-    background-color: #2a2a2a;
-    border: 0.125rem solid #000000;
-}
-
-.error-links-title {
     margin: 0 0 0.5rem;
-    font-size: 0.875rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #55ff55;
-}
-
-.error-links ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.error-links li { margin: 0.25rem 0; }
-
-.error-links a {
+    font-size: 1.125rem;
     color: #e0e0e0;
-    text-decoration: none;
 }
 
-.error-links a:hover {
-    color: #55ff55;
-    text-decoration: underline;
-}
+.error-box .minecraft-btn { margin-top: 1.25rem; }
 
 @media (max-width: 960px), (max-device-width: 600px) {
-    .error-box { margin-top: 0; }
-    .error-header { padding: 0.625rem 1rem; }
-    .error-body { padding: 1.5rem 1rem; }
+    .error-box { margin-top: 0.5rem; padding: 1.5rem 1rem; }
     .error-code { font-size: 3.5rem; }
     .error-title { font-size: 1.375rem; }
-    .error-body .minecraft-btn { display: block; width: 100%; }
+    .error-box .minecraft-btn { display: block; }
 }
