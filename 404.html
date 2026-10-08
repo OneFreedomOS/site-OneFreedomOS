@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3c3c3c">
     <meta name="robots" content="noindex">
     <title>OneFreedomOS - 404</title>
-    <link rel="icon" href="logo (2).png?v=2" type="image/png">
-    <link rel="stylesheet" href="css/Home.css">
+    <link rel="icon" type="image/png" href="logo%20(2).png">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/404.css">
 </head>
 <body class="page-404">
@@ -14,7 +15,7 @@
     <nav class="navigation-panel">
         <div class="left-nav-group">
             <div class="brand-container">
-                <img src="logo.png" alt="OS Logo" class="brand-logo">
+                <img src="logo.png" alt="OneFreedomOS" class="brand-logo">
                 <span class="brand-name">OneFreedomOS</span>
             </div>
 
@@ -26,19 +27,38 @@
             </div>
         </div>
 
-        <button class="lang-btn" id="lang-toggle">RU</button>
+        <button class="lang-btn" id="lang-toggle" type="button">RU</button>
     </nav>
 
     <div class="content-container">
         <main class="page-content">
             <section class="error-box">
-                <p class="error-code">404</p>
-                <h1 class="error-title" data-en="Connection lost" data-ru="Соединение разорвано">Connection lost</h1>
-                <p class="error-text" data-en="Page not found" data-ru="Страница не найдена">Page not found</p>
-                <a href="index.html" class="minecraft-btn minecraft-btn-green" data-en="Back to Home" data-ru="На главную">Back to Home</a>
+                <div class="error-header">
+                    <span data-en="System message" data-ru="Системное сообщение">System message</span>
+                    <span>HTTP 404</span>
+                </div>
+
+                <div class="error-body">
+                    <p class="error-code">404</p>
+                    <h1 class="error-title" data-en="Page not found" data-ru="Страница не найдена">Page not found</h1>
+                    <p class="error-text" data-en="The page you requested does not exist, has been moved or is temporarily unavailable. Check the address or use one of the links below." data-ru="Запрошенная страница не существует, была перемещена или временно недоступна. Проверьте адрес или воспользуйтесь одной из ссылок ниже.">The page you requested does not exist, has been moved or is temporarily unavailable. Check the address or use one of the links below.</p>
+
+                    <div class="error-links">
+                        <p class="error-links-title" data-en="Available sections" data-ru="Доступные разделы">Available sections</p>
+                        <ul>
+                            <li><a href="index.html" data-en="Home" data-ru="Главная">Home</a></li>
+                            <li><a href="Installer.html" data-en="Installer" data-ru="Установка">Installer</a></li>
+                            <li><a href="Community.html" data-en="Community" data-ru="Сообщество">Community</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="index.html" class="minecraft-btn minecraft-btn-green" data-en="Back to Home" data-ru="На главную">Back to Home</a>
+                </div>
             </section>
         </main>
     </div>
+
+    <footer class="site-footer" data-en="© OneFreedomOS. Beta version." data-ru="© OneFreedomOS. Бета-версия.">© OneFreedomOS. Beta version.</footer>
 
     <script src="js/home.js"></script>
 </body>
